@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#071320" />
+  <title>CraftCrousty Car · par Crafti</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brandbox" id="goHome" role="button" tabindex="0">
+        <div class="logo">C<span>•</span></div>
+        <div><strong>CRAFTCROUSTY</strong><small>CAR <b>by Crafti</b></small></div>
+      </div>
+      <div class="side-heading">DÉCOUVRIR</div>
+      <nav class="sidenav" aria-label="Navigation principale">
+        <button class="nav-item active" data-view="catalog"><span class="nav-ico">▦</span><span>Catalogue auto</span><span class="nav-tail">›</span></button>
+        <button class="nav-item" data-view="favorites"><span class="nav-ico">♡</span><span>Mes favoris</span></button>
+        <button class="nav-item" data-view="workshop"><span class="nav-ico">⬡</span><span>Atelier 3D</span></button>
+        <button class="nav-item" data-view="about"><span class="nav-ico">ⓘ</span><span>À propos</span></button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="tiny-car">◈</div>
+        <b>LA MÉCANIQUE, DE PRÈS.</b>
+        <p>Chaque courbe a une histoire.<br>Chaque pièce a un rôle.</p>
+        <span>Développé par <strong>Crafti</strong></span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-logo"><span class="logo mini">C<span>•</span></span><strong>CRAFTCROUSTY <em>CAR</em></strong></div>
+        <div class="crumb" id="breadcrumb"><span>Explorer</span><i>/</i><strong>Catalogue automobile</strong></div>
+        <div class="top-actions">
+          <div class="status-dot"></div><span id="connectionText">Catalogue intégré</span>
+          <button id="reloadBtn" class="icon-btn" title="Actualiser le catalogue" aria-label="Actualiser le catalogue">⟳</button>
+        </div>
+      </header>
+
+      <section id="catalogView" class="view">
+        <section class="hero">
+          <div class="hero-copy"><div class="eyebrow"><span class="line"></span> L'ENCYCLOPÉDIE AUTOMOBILE INTERACTIVE</div>
+            <h1>La passion auto,<br><em>pièce par pièce.</em></h1>
+            <p>Explore des milliers de modèles, découvre leur histoire et examine leur mécanique en 3D.</p>
+            <button id="hero3dBtn" class="cta">EXPLORER EN 3D <span>↗</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-glow"></div>
+            <svg viewBox="0 0 650 380" class="hero-car" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="paint" x1="0" x2="1"><stop stop-color="#1b5368"/><stop offset=".45" stop-color="#43dde7"/><stop offset="1" stop-color="#18889a"/></linearGradient><linearGradient id="shine" x1="0" x2="1"><stop stop-color="#c0ffff"/><stop offset="1" stop-color="#3c9cb9"/></linearGradient></defs>
+              <g transform="translate(9 7) rotate(-5 320 230)">
+                <ellipse cx="332" cy="298" rx="264" ry="23" fill="#00a7ce" opacity=".13"/>
+                <path d="M92 249 L128 211 Q152 196 202 192 L256 141 Q285 117 378 118 L464 168 L537 195 Q571 203 583 233 L577 271 L97 273 Z" fill="url(#paint)" stroke="#80f8ff" stroke-width="2"/>
+                <path d="M256 141 Q289 119 374 119 L453 168 L256 173 Z" fill="#132f43" stroke="#a3f8fd" stroke-width="2"/>
+                <path d="M259 146 L249 175 L170 190" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" fill="none"/>
+                <path d="M382 127 L451 171 L412 171 L375 132" fill="#39718c" opacity=".85"/>
+                <path d="M91 247 Q138 221 211 221 L503 222 Q559 223 584 240" stroke="url(#shine)" stroke-width="5" fill="none" opacity=".7"/>
+                <path d="M138 222 L91 244 L89 258 L140 254" fill="#161e38"/>
+                <path d="M515 226 L579 229 L579 242 L522 240" fill="#c4f9f9" opacity=".85"/>
+                <path d="M103 264 H568" stroke="#072735" stroke-width="12"/>
+                <g><circle cx="201" cy="273" r="54" fill="#080f21"/><circle cx="201" cy="273" r="35" fill="#9aaec8"/><circle cx="201" cy="273" r="26" fill="#243b57"/><circle cx="201" cy="273" r="13" fill="#87eaff"/></g>
+                <g><circle cx="475" cy="273" r="54" fill="#080f21"/><circle cx="475" cy="273" r="35" fill="#9aaec8"/><circle cx="475" cy="273" r="26" fill="#243b57"/><circle cx="475" cy="273" r="13" fill="#87eaff"/></g>
+                <path d="M280 184 H397" stroke="#9fe5ee" stroke-width="2" opacity=".6"/>
+                <path d="M390 187 V246" stroke="#9fe5ee" stroke-width="1" opacity=".35"/>
+                <path d="M413 203 H435" stroke="#ccffff" stroke-width="3" stroke-linecap="round"/>
+              </g>
+            </svg>
+            <div class="float-label"><span class="float-plus">+</span><div><b>EXPLORATION 3D</b><small>Mécanique interactive</small></div></div>
+          </div>
+        </section>
+
+        <section class="stats-row">
+          <div class="metric"><span class="metric-icon">▦</span><div><b id="countStat">—</b><small>RÉFÉRENCES AUTO</small></div></div>
+          <div class="metric"><span class="metric-icon">◉</span><div><b id="brandStat">—</b><small>MARQUES</small></div></div>
+          <div class="metric"><span class="metric-icon">⬡</span><div><b>3D</b><small>PIÈCES INTERACTIVES</small></div></div>
+          <div class="metric last"><span class="metric-icon">♡</span><div><b id="favStat">0</b><small>MODÈLES SAUVEGARDÉS</small></div></div>
+        </section>
+
+        <section class="list-head"><div><div class="eyebrow small">L'UNIVERS AUTOMOBILE</div><h2 id="listTitle">Tous les modèles <span class="count-tag" id="resultCount">—</span></h2></div>
+          <div class="list-controls"><div class="search-field"><span>⌕</span><input id="searchInput" placeholder="Rechercher une marque, un modèle..." aria-label="Rechercher une voiture"></div><select id="brandFilter" aria-label="Filtrer par marque"><option value="">Toutes les marques</option></select></div>
+        </section>
+        <div class="filter-row" id="originFilters" aria-label="Filtres géographiques"><button class="chip selected" data-origin="all">Toutes</button><button class="chip" data-origin="france">🇫🇷 Françaises</button><button class="chip" data-origin="germany">🇩🇪 Allemandes</button><button class="chip" data-origin="japan">🇯🇵 Japonaises</button><button class="chip" data-origin="usa">🇺🇸 Américaines</button><button class="chip" data-origin="italy">🇮🇹 Italiennes</button></div>
+        <div class="car-grid" id="carGrid" aria-live="polite"></div>
+        <div class="more-wrap"><button id="loadMoreBtn" class="more-btn">AFFICHER PLUS DE MODÈLES ↓</button></div>
+      </section>
+
+      <section id="favoritesView" class="view hidden"><div class="inner-page"><div class="eyebrow small">VOTRE COLLECTION</div><h1>Mes favoris <span class="count-tag" id="favCount">0</span></h1><p>Retrouve ici les voitures que tu as enregistrées.</p><div class="car-grid" id="favoriteGrid"></div></div></section>
+
+      <section id="workshopView" class="view hidden"><div class="inner-page"><div class="eyebrow small">CRAFTCROUSTY LAB</div><h1>Atelier <em>3D.</em></h1><p>Fais pivoter la voiture avec ton doigt. Sélectionne une zone pour en isoler la structure et découvrir ses composants.</p><div id="standaloneWorkshop"></div></div></section>
+
+      <section id="aboutView" class="view hidden"><div class="inner-page about-page"><div class="eyebrow small">LE PROJET</div><h1>Créé pour les <em>passionnés.</em></h1><p>CraftCrousty Car est une encyclopédie automobile avec galeries de photos et un atelier mécanique 3D interactif imaginés par <b>Crafti</b>.</p><div class="about-cards"><article><b>Catalogue automobile</b><p>Plus de 2 500 références de noms de modèles et de variantes intégrées pour consulter sans connexion. Le catalogue 2019 externe réunit 2 157 modèles vérifiables par leur source.</p></article><article><b>Histoire des modèles</b><p>Une sélection de repères historiques est incluse. Pour d'autres modèles, une recherche Wikipédia est proposée avec connexion. Les données absentes ne sont pas inventées.</p></article><article><b>Atelier 3D schématique</b><p>Une voiture générique rotative présente carrosserie, roues, moteur, transmission, suspension, freinage et habitacle. Ce n'est pas le scan 3D exact de chaque automobile.</p></article></div><h2>Sources & crédits</h2><p>Les photos affichées en ligne sont recherchées sur <a href="https://commons.wikimedia.org/" data-external>Wikimedia Commons</a>. Chaque photo publiée est accompagnée du crédit, de sa licence et d'un lien vers la fiche originale. Il peut manquer des photos pour certains modèles ou variantes.</p><p>Création et développement : <b>Crafti</b>. Noms du catalogue d'appoint : sélection non exhaustive de modèles et variantes connus. Référence complémentaire : <a href="https://github.com/Savage3D/car-makes-models-data" data-external>Car Makes & Models Data (MIT, 2019)</a> — 116 marques et 2 157 modèles. Textes historiques complémentaires : <a href="https://fr.wikipedia.org/" data-external>Wikipédia</a>, lorsque disponibles, avec lien vers la source. Éléments 3D : dessin schématique original généré par l'application.</p><p class="disclaimer">Les noms de marques servent uniquement à l'identification. Aucune affiliation avec les constructeurs. Les spécifications exactes par année, motorisation ou finition nécessitent des sources techniques supplémentaires.</p></div></section>
+    </main>
+  </div>
+
+  <div id="detailOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Fiche véhicule">
+    <section class="detail-shell">
+      <div class="detail-head"><div><span class="tagline">FICHE AUTOMOBILE</span><h2 id="detailTitle">—</h2><div id="detailSub" class="detail-sub">—</div></div><div class="detail-actions"><button id="detailFav" class="icon-btn favor" title="Ajouter aux favoris" aria-label="Favoris">♡</button><button id="detailClose" class="close-btn" aria-label="Fermer">✕</button></div></div>
+      <div class="detail-tabs" role="tablist"><button class="detail-tab selected" data-tab="history" role="tab">Histoire</button><button class="detail-tab" data-tab="photos" role="tab">📷 Photos</button><button class="detail-tab" data-tab="specs" role="tab">Informations</button><button class="detail-tab" data-tab="3d" role="tab">Atelier 3D <span class="new-dot">●</span></button></div>
+      <div class="detail-content" id="historyPanel"><div class="history-layout"><div class="history-art" id="detailArt"></div><div><div class="eyebrow small">SON HISTOIRE</div><h3 id="historyHeading">Une légende à découvrir</h3><p id="historyText">Chargement...</p><div id="historySource" class="history-source"></div><div class="source-note">Les informations historiques sont affichées uniquement lorsqu'une source est disponible.</div></div></div></div>
+      <div class="detail-content hidden" id="photosPanel">
+        <div class="eyebrow small">GALERIE AUTOMOBILE</div>
+        <h3>Photos réelles du modèle</h3>
+        <p id="photosIntro" class="photo-intro">Recherche de photos sur Wikimedia Commons…</p>
+        <div id="photoMain" class="photo-main"><div class="photo-wait">Chargement de la galerie…</div></div>
+        <div id="photoThumbnails" class="photo-thumbnails" aria-label="Choisir une photo"></div>
+        <div id="photoCredits" class="photo-credits" aria-live="polite"></div>
+        <p class="info-note">Les photos proviennent de contributeurs Wikimedia Commons, avec leur licence et un lien vers le fichier original. Les véhicules représentés peuvent différer par millésime ou finition. Connexion Internet nécessaire ; aucune photo non vérifiée n'est inventée.</p>
+      </div>
+      <div class="detail-content hidden" id="specsPanel"><div class="eyebrow small">FICHE IDENTITÉ</div><h3>Les informations essentielles</h3><div class="spec-grid"><div><small>MARQUE</small><strong id="specBrand">—</strong></div><div><small>MODÈLE / VERSION</small><strong id="specModel">—</strong></div><div><small>SÉRIE (SI CONNUE)</small><strong id="specSeries">Non précisée</strong></div><div><small>PROVENANCE DU NOM</small><strong id="specSource">Catalogue local</strong></div></div><p class="info-note">Années de production, performances, consommation et motorisations : non renseignées tant qu'une source fiable n'est pas associée à cette version.</p></div>
+      <div class="detail-content hidden" id="threeDPanel"></div>
+    </section>
+  </div>
+  <nav class="bottomnav" aria-label="Navigation mobile"><button data-view="catalog" class="active"><span>▦</span>Catalogue</button><button data-view="favorites"><span>♡</span>Favoris</button><button data-view="workshop"><span>⬡</span>Atelier 3D</button><button data-view="about"><span>ⓘ</span>Infos</button></nav>
+  <script src="catalogue-offline.js"></script><script src="three-d.js"></script><script src="photos.js"></script><script src="app.js"></script>
+</body>
+</html>
